@@ -31,25 +31,6 @@ const startSteps = [
   },
 ];
 
-const pitfalls = [
-  {
-    problem: "The npm command is not found",
-    fix: "Install Node.js from nodejs.org, choose the LTS version, then close and reopen Terminal.",
-  },
-  {
-    problem: "localhost:3000 will not open",
-    fix: "Check the terminal for a different address. If port 3000 is busy, Next.js may use 3001 instead.",
-  },
-  {
-    problem: "Changes are not showing up",
-    fix: "Save the file first, then refresh the browser. If it still looks old, stop the server with Control + C and run npm run dev again.",
-  },
-  {
-    problem: "The terminal looks stuck",
-    fix: "If it says Ready, it is working. Keep that window open and use the browser to view the site.",
-  },
-];
-
 export default function Home() {
   return (
     <main>
@@ -93,26 +74,6 @@ export default function Home() {
                 <p>{step.detail}</p>
                 <code>{step.command}</code>
               </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section pitfallsSection">
-        <div className="sectionHeader">
-          <p className="eyebrow">Common pitfalls</p>
-          <h2>When something feels broken</h2>
-          <p>
-            Most first-time setup problems are small environment issues. These
-            are the ones beginners hit most often.
-          </p>
-        </div>
-
-        <div className="pitfalls">
-          {pitfalls.map((item) => (
-            <article className="pitfall" key={item.problem}>
-              <h3>{item.problem}</h3>
-              <p>{item.fix}</p>
             </article>
           ))}
         </div>
